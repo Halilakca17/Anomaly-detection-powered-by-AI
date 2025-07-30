@@ -1,8 +1,8 @@
-# 📘 Proje Açıklaması
+#  Proje Açıklaması
 
 Bu projede, çeşitli günlere ait ağ trafiği verileri birleştirilerek makine öğrenmesi ve derin öğrenme tabanlı bir **anomali tespit sistemi** geliştirilmiştir.
 
-## 📂 Kullanılan Veri Setleri
+##  Kullanılan Veri Setleri
 
 | Dosya Adı         | Boyut     | Saldırı Türü / Özellikler                      |
 |------------------|-----------|------------------------------------------------|
@@ -14,14 +14,14 @@ Bu projede, çeşitli günlere ait ağ trafiği verileri birleştirilerek makine
 
 Tüm veri setleri birleştirilmiş ve gerekli ön işleme adımlarından geçirilmiştir. Eksik, sonsuz ve tekrarlı değerler temizlenmiş; sayısal özellikler normalize edilmiştir.
 
-## 🧠 Kullanılan Modeller
+##  Kullanılan Modeller
 
 Aşağıdaki modeller ile çok sınıflı saldırı tespiti gerçekleştirilmiştir:
 
-- 🌲 **Random Forest**
-- 🧠 **Derin Öğrenme** (Yapay Sinir Ağı)
-- 📈 **Support Vector Machine (SVM)**
-- 🔍 **K-Nearest Neighbors (KNN)**
+-  **Random Forest**
+-  **Derin Öğrenme** (Yapay Sinir Ağı)
+-  **Support Vector Machine (SVM)**
+-  **K-Nearest Neighbors (KNN)**
 
 Modeller, eğitildikten sonra aşağıdaki metrikler ile değerlendirilmiştir:
 
@@ -30,7 +30,7 @@ Modeller, eğitildikten sonra aşağıdaki metrikler ile değerlendirilmiştir:
 - `F1-Score`
 - `Confusion Matrix`
 
-## 🎯 Projenin Amacı
+##  Projenin Amacı
 
 Bu çalışmanın temel amacı, farklı saldırı türlerinin tespit edilebilirliğini karşılaştırmak ve en yüksek doğruluğu sağlayan yöntemi belirlemektir. Böylece, ağ trafiğindeki zararlı aktivitelerin daha etkili biçimde analiz edilmesi ve önlenmesi hedeflenmektedir.
 
@@ -38,7 +38,7 @@ Bu çalışmanın temel amacı, farklı saldırı türlerinin tespit edilebilirl
 
 *Not: Bu proje, [CICIDS 2018](https://www.unb.ca/cic/datasets/ids-2018.html) veri kümesine dayalı olarak gerçekleştirilmiştir.*
 
-## ⚙️ Kurulum
+##  Kurulum
 
 Bu projeyi çalıştırmak için aşağıdaki adımları izleyebilirsiniz:
 
@@ -65,7 +65,7 @@ pip install pandas numpy tensorflow matplotlib seaborn scikit-learn scipy
 python ids.py
 ```
 
-## 🔍 Veri Analizi Süreci
+##  Veri Analizi Süreci
 
 ### 1. Veri Ön İşleme
 - **Veri Birleştirme**: Farklı günlere ait CSV dosyaları birleştirildi
@@ -75,7 +75,7 @@ python ids.py
 
 ### 2. Keşifsel Veri Analizi (EDA)
 
-#### 📊 Trafik Süresi Analizi
+####  Trafik Süresi Analizi
 Bağlantı süreleri kategorik olarak analiz edildi:
 - **Anlık (0s)**: Kesintisiz bağlantılar
 - **Çok Kısa (0-1s)**: Hızlı işlemler
@@ -83,7 +83,7 @@ Bağlantı süreleri kategorik olarak analiz edildi:
 - **Orta (10-60s)**: Dosya indirme/yükleme
 - **Uzun (60s+)**: Uzun süreli bağlantılar
 
-#### 🔌 Port Analizi
+####  Port Analizi
 - **En Çok Kullanılan Portlar**: Top 15 port listesi
 - **Servis Portları**: HTTP (80), HTTPS (443), SSH (22), FTP (21) vb.
 - **Port Aralık Dağılımı**:
@@ -98,7 +98,7 @@ Bağlantı süreleri kategorik olarak analiz edildi:
 - Dynamic/Private Portlar (49152–65535):
 - Geçici bağlantılar için sistem tarafından dinamik olarak atanır.
 - Genelde istemci tarafında bağlantı başlatırken kullanılır.
-#### 🌐 Protokol Analizi
+####  Protokol Analizi
 - **TCP**: En yaygın protokol
 - **UDP**: İkinci sırada
 - **ICMP**: Ping ve tanı trafiği
@@ -115,7 +115,7 @@ Bağlantı süreleri kategorik olarak analiz edildi:
 - **Feature Importance**: Random Forest ile özellik önemleri
 - **Sınıf Bazlı Karşılaştırma**: Benign vs Malicious trafik analizi
 
-## 🤖 Model Mimarileri
+## Model Mimarileri
 
 ### Derin Öğrenme Modeli (TensorFlow)
 ```python
@@ -140,13 +140,13 @@ Hyperparameters:
 
 
 ### Görselleştirmeler
-- 🔥 Confusion Matrix heatmap'leri
-- 📊 Feature importance grafikleri
-- 📈 Sınıf dağılım grafikleri  
-- 🎯 Korelasyon heatmap'i
-- 🔍 Anomali skorları dağılımı
+-  Confusion Matrix heatmap'leri
+-  Feature importance grafikleri
+-  Sınıf dağılım grafikleri  
+-  Korelasyon heatmap'i
+-  Anomali skorları dağılımı
 
-## 🏆 En Önemli Özellikler
+## En Önemli Özellikler
 
 Model analizi sonucunda tespit edilen kritik özellikler:
 
@@ -184,31 +184,31 @@ Model Accuracy Comparison:
 └── KNN: 0.9493
 ```
 
-## ✅ Sonuç ve Değerlendirme
+##  Sonuç ve Değerlendirme
 
 Bu projede, farklı günlerden elde edilen çeşitli ağ trafiği verileri birleştirilerek çok sınıflı saldırı tespiti amacıyla hem makine öğrenmesi hem de derin öğrenme modelleri uygulanmıştır. Gerçekleştirilen analizler ve karşılaştırmalar sonucunda şu bulgulara ulaşılmıştır:
 
-- 🌲 **Random Forest** modeli, %95.07 doğruluk oranı ile en yüksek başarıyı sağlamıştır.
-- 🧠 **Derin Öğrenme (Yapay Sinir Ağı)** modeli, %94.50 doğruluk ile karmaşık örüntüleri tanımada etkili olmuştur.
-- 📈 **SVM** ve 🔍 **KNN** modelleri de benzer başarı oranları göstermiştir ancak eğitim süresi ve veri ölçeği açısından bazı sınırlamalar gözlemlenmiştir.
-- 🧪 Özellik önem dereceleri incelendiğinde, `Init Fwd Win Byts`, `Dst Port`, `Fwd Header Len`, `Fwd Seg Size Min`, ve `Bwd Pkts/s` gibi ağ trafiğine ait teknik parametrelerin saldırıların tespitinde kritik rol oynadığı görülmüştür.
+-  **Random Forest** modeli, %95.07 doğruluk oranı ile en yüksek başarıyı sağlamıştır.
+-  **Derin Öğrenme (Yapay Sinir Ağı)** modeli, %94.50 doğruluk ile karmaşık örüntüleri tanımada etkili olmuştur.
+-  **SVM** ve 🔍 **KNN** modelleri de benzer başarı oranları göstermiştir ancak eğitim süresi ve veri ölçeği açısından bazı sınırlamalar gözlemlenmiştir.
+- Özellik önem dereceleri incelendiğinde, `Init Fwd Win Byts`, `Dst Port`, `Fwd Header Len`, `Fwd Seg Size Min`, ve `Bwd Pkts/s` gibi ağ trafiğine ait teknik parametrelerin saldırıların tespitinde kritik rol oynadığı görülmüştür.
 
 Yapılan çalışmalar, farklı saldırı türlerinin ağ trafiği üzerindeki davranışsal izlerini ortaya koymuş ve bu izlerin başarılı bir şekilde sınıflandırılabileceğini göstermiştir.
 
 ---
 
-### 📌 Gelecek Çalışmalar İçin Öneriler
+###  Gelecek Çalışmalar İçin Öneriler
 
-- 🛠️ **Özellik mühendisliği** daha da geliştirilebilir (örneğin zamansal özetler, oturum bazlı analizler vb.).
-- ⚙️ **Derin öğrenme modelleri** için daha uzun eğitim süresi ve hiperparametre optimizasyonu ile performans artırılabilir.
-- 🧪 **Gerçek zamanlı ağ trafiği** üzerinde test edilerek modellerin pratikteki başarıları değerlendirilebilir.
-- 🔁 **Transfer learning** veya önceden eğitilmiş modeller ile daha az veriyle daha hızlı sonuçlar elde edilebilir.
+-  **Özellik mühendisliği** daha da geliştirilebilir (örneğin zamansal özetler, oturum bazlı analizler vb.).
+-  **Derin öğrenme modelleri** için daha uzun eğitim süresi ve hiperparametre optimizasyonu ile performans artırılabilir.
+-  **Gerçek zamanlı ağ trafiği** üzerinde test edilerek modellerin pratikteki başarıları değerlendirilebilir.
+-  **Transfer learning** veya önceden eğitilmiş modeller ile daha az veriyle daha hızlı sonuçlar elde edilebilir.
 
-> 📌 Not: Bu projenin çıktıları, siber güvenlik alanında anomali tespiti sistemlerinin etkinliğini artırmaya yönelik somut bir temel sunmaktadır.
+>  Not: Bu projenin çıktıları, siber güvenlik alanında anomali tespiti sistemlerinin etkinliğini artırmaya yönelik somut bir temel sunmaktadır.
 
 
 
-## 🤝 Katkıda Bulunma
+##  Katkıda Bulunma
 
 1. Fork yapın
 2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
