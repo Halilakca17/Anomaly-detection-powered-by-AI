@@ -158,20 +158,6 @@ Model analizi sonucunda tespit edilen kritik özellikler:
 
 
 
-### Model Hiperparametrelerini Değiştirme
-```python
-# Random Forest için
-RandomForestClassifier(
-    n_estimators=200,  # Ağaç sayısını artır
-    max_depth=10,      # Maksimum derinlik
-    random_state=42
-)
-
-# Neural Network için
-model.add(Dense(256, activation='relu'))  # Daha fazla nöron
-model.compile(optimizer='adamax')         # Farklı optimizer
-```
-
 
 ## 📊 Örnek Çıktılar
 
